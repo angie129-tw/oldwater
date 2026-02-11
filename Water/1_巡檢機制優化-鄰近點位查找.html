@@ -1,0 +1,1017 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>1_巡檢機制優化-鄰近點位查找</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
+    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="files/1_巡檢機制優化-鄰近點位查找/styles.css" type="text/css" rel="stylesheet"/>
+    <script src="resources/scripts/jquery-3.2.1.min.js"></script>
+    <script src="resources/scripts/axure/axQuery.js"></script>
+    <script src="resources/scripts/axure/globals.js"></script>
+    <script src="resources/scripts/axutils.js"></script>
+    <script src="resources/scripts/axure/annotation.js"></script>
+    <script src="resources/scripts/axure/axQuery.std.js"></script>
+    <script src="resources/scripts/axure/doc.js"></script>
+    <script src="resources/scripts/messagecenter.js"></script>
+    <script src="resources/scripts/axure/events.js"></script>
+    <script src="resources/scripts/axure/recording.js"></script>
+    <script src="resources/scripts/axure/action.js"></script>
+    <script src="resources/scripts/axure/expr.js"></script>
+    <script src="resources/scripts/axure/geometry.js"></script>
+    <script src="resources/scripts/axure/flyout.js"></script>
+    <script src="resources/scripts/axure/model.js"></script>
+    <script src="resources/scripts/axure/repeater.js"></script>
+    <script src="resources/scripts/axure/sto.js"></script>
+    <script src="resources/scripts/axure/utils.temp.js"></script>
+    <script src="resources/scripts/axure/variables.js"></script>
+    <script src="resources/scripts/axure/drag.js"></script>
+    <script src="resources/scripts/axure/move.js"></script>
+    <script src="resources/scripts/axure/visibility.js"></script>
+    <script src="resources/scripts/axure/style.js"></script>
+    <script src="resources/scripts/axure/adaptive.js"></script>
+    <script src="resources/scripts/axure/tree.js"></script>
+    <script src="resources/scripts/axure/init.temp.js"></script>
+    <script src="resources/scripts/axure/legacy.js"></script>
+    <script src="resources/scripts/axure/viewer.js"></script>
+    <script src="resources/scripts/axure/math.js"></script>
+    <script src="resources/scripts/axure/jquery.nicescroll.min.js"></script>
+    <script src="data/document.js"></script>
+    <script src="files/1_巡檢機制優化-鄰近點位查找/data.js"></script>
+    <script type="text/javascript">
+      $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
+      $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
+      $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
+    </script>
+  </head>
+  <body>
+    <div id="base" class="">
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u0" class="ax_default box_3">
+        <div id="u0_div" class=""></div>
+        <div id="u0_text" class="text ">
+          <p><span>目前系統畫面</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u1" class="ax_default box_3">
+        <div id="u1_div" class=""></div>
+        <div id="u1_text" class="text ">
+          <p><span>未來系統畫面</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Image) -->
+      <div id="u2" class="ax_default image">
+        <img id="u2_img" class="img " src="images/1_巡檢機制優化-鄰近點位查找/u2.png"/>
+        <div id="u2_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- ohand (Dynamic Panel) -->
+      <div id="u3" class="ax_default ax_default_hidden" data-label="ohand" style="display:none; visibility: hidden">
+        <div id="u3_state0" class="panel_state" data-label="State1" style="">
+          <div id="u3_state0_content" class="panel_state_content">
+
+            <!-- Unnamed (Group) -->
+            <div id="u4" class="ax_default" data-left="0" data-top="0" data-width="935" data-height="809">
+
+              <!-- Unnamed (Image) -->
+              <div id="u5" class="ax_default image">
+                <img id="u5_img" class="img " src="images/1_巡檢機制優化-鄰近點位查找/u5.png"/>
+                <div id="u5_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (Droplist) -->
+              <div id="u6" class="ax_default droplist">
+                <div id="u6_div" class=""></div>
+                <select id="u6_input" class="u6_input">
+                  <option class="u6_input_option" value="   ">&nbsp;&nbsp; </option>
+                  <option class="u6_input_option" value="北區管理站">北區管理站</option>
+                  <option class="u6_input_option" value="東區管理站">東區管理站</option>
+                  <option class="u6_input_option" value="南區管理站">南區管理站</option>
+                  <option class="u6_input_option" value="生態管理站">生態管理站</option>
+                </select>
+              </div>
+
+              <!-- Unnamed (Droplist) -->
+              <div id="u7" class="ax_default droplist">
+                <div id="u7_div" class=""></div>
+                <select id="u7_input" class="u7_input">
+                  <option class="u7_input_option" value="   ">&nbsp;&nbsp; </option>
+                  <option class="u7_input_option" value="雙溪左岸">雙溪左岸</option>
+                  <option class="u7_input_option" value="雙溪右岸">雙溪右岸</option>
+                  <option class="u7_input_option" value="五分港溪">五分港溪</option>
+                  <option class="u7_input_option" value="外雙溪">外雙溪</option>
+                </select>
+              </div>
+
+              <!-- Unnamed (Droplist) -->
+              <div id="u8" class="ax_default droplist">
+                <div id="u8_div" class=""></div>
+                <select id="u8_input" class="u8_input">
+                  <option class="u8_input_option" value="     ">&nbsp;&nbsp; &nbsp; </option>
+                  <option class="u8_input_option" value="人行活動廣場">人行活動廣場</option>
+                  <option class="u8_input_option" value="人行道">人行道</option>
+                  <option class="u8_input_option" value="自行車道">自行車道</option>
+                  <option class="u8_input_option" value="流動廁所">流動廁所</option>
+                </select>
+              </div>
+
+              <!-- Unnamed (Droplist) -->
+              <div id="u9" class="ax_default droplist">
+                <div id="u9_div" class=""></div>
+                <select id="u9_input" class="u9_input">
+                  <option class="u9_input_option" value="    ">&nbsp;&nbsp;&nbsp; </option>
+                  <option class="u9_input_option" value="FG037020001(待巡查)">FG037020001(待巡查)</option>
+                  <option class="u9_input_option" value="FG037020002">FG037020002</option>
+                  <option class="u9_input_option" value="FG037020003">FG037020003</option>
+                  <option class="u9_input_option" value="FG037020004">FG037020004</option>
+                </select>
+              </div>
+
+              <!-- Unnamed (Rectangle) -->
+              <div id="u10" class="ax_default primary_button">
+                <div id="u10_div" class=""></div>
+                <div id="u10_text" class="text ">
+                  <p><span>查詢</span></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Unnamed (Hot Spot) -->
+            <div id="u11" class="ax_default">
+            </div>
+
+            <!-- Unnamed (Hot Spot) -->
+            <div id="u12" class="ax_default">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (Hot Spot) -->
+      <div id="u13" class="ax_default">
+      </div>
+
+      <!-- loss (Dynamic Panel) -->
+      <div id="u14" class="ax_default ax_default_hidden" data-label="loss" style="display:none; visibility: hidden">
+        <div id="u14_state0" class="panel_state" data-label="State1" style="">
+          <div id="u14_state0_content" class="panel_state_content">
+
+            <!-- Unnamed (Image) -->
+            <div id="u15" class="ax_default image">
+              <img id="u15_img" class="img " src="images/1_巡檢機制優化-鄰近點位查找/u15.png"/>
+              <div id="u15_text" class="text " style="display:none; visibility: hidden">
+                <p></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (Image) -->
+      <div id="u16" class="ax_default image">
+        <img id="u16_img" class="img " src="images/1_巡檢機制優化-鄰近點位查找/u2.png"/>
+        <div id="u16_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u17" class="ax_default box_1">
+        <div id="u17_div" class=""></div>
+        <div id="u17_text" class="text ">
+          <p><span>鄰近點位</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u18" class="ax_default box_1">
+        <div id="u18_div" class=""></div>
+        <div id="u18_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u19" class="ax_default box_1">
+        <div id="u19_div" class=""></div>
+        <div id="u19_text" class="text ">
+          <p><span>手動填登</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Ellipse) -->
+      <div id="u20" class="ax_default ellipse">
+        <img id="u20_img" class="img " src="images/1_巡檢機制優化-鄰近點位查找/u20.svg"/>
+        <div id="u20_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Ellipse) -->
+      <div id="u21" class="ax_default ellipse">
+        <img id="u21_img" class="img " src="images/1_巡檢機制優化-鄰近點位查找/u20.svg"/>
+        <div id="u21_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (Hot Spot) -->
+      <div id="u22" class="ax_default">
+      </div>
+
+      <!-- Unnamed (Hot Spot) -->
+      <div id="u23" class="ax_default">
+      </div>
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u24" class="ax_default box_1">
+        <div id="u24_div" class=""></div>
+        <div id="u24_text" class="text ">
+          <p><span>掃描QRCode</span></p>
+        </div>
+      </div>
+
+      <!-- ohand2 (Dynamic Panel) -->
+      <div id="u25" class="ax_default ax_default_hidden" data-label="ohand2" style="display:none; visibility: hidden">
+        <div id="u25_state0" class="panel_state" data-label="State1" style="">
+          <div id="u25_state0_content" class="panel_state_content">
+
+            <!-- Unnamed (Group) -->
+            <div id="u26" class="ax_default" data-left="0" data-top="0" data-width="935" data-height="809">
+
+              <!-- Unnamed (Image) -->
+              <div id="u27" class="ax_default image">
+                <img id="u27_img" class="img " src="images/1_巡檢機制優化-鄰近點位查找/u5.png"/>
+                <div id="u27_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (Droplist) -->
+              <div id="u28" class="ax_default droplist">
+                <div id="u28_div" class=""></div>
+                <select id="u28_input" class="u28_input">
+                  <option class="u28_input_option" value="   ">&nbsp;&nbsp; </option>
+                  <option class="u28_input_option" value="北區管理站">北區管理站</option>
+                  <option class="u28_input_option" value="東區管理站">東區管理站</option>
+                  <option class="u28_input_option" value="南區管理站">南區管理站</option>
+                  <option class="u28_input_option" value="生態管理站">生態管理站</option>
+                </select>
+              </div>
+
+              <!-- Unnamed (Droplist) -->
+              <div id="u29" class="ax_default droplist">
+                <div id="u29_div" class=""></div>
+                <select id="u29_input" class="u29_input">
+                  <option class="u29_input_option" value="   ">&nbsp;&nbsp; </option>
+                  <option class="u29_input_option" value="雙溪左岸">雙溪左岸</option>
+                  <option class="u29_input_option" value="雙溪右岸">雙溪右岸</option>
+                  <option class="u29_input_option" value="五分港溪">五分港溪</option>
+                  <option class="u29_input_option" value="外雙溪">外雙溪</option>
+                </select>
+              </div>
+
+              <!-- Unnamed (Droplist) -->
+              <div id="u30" class="ax_default droplist">
+                <div id="u30_div" class=""></div>
+                <select id="u30_input" class="u30_input">
+                  <option class="u30_input_option" value="     ">&nbsp;&nbsp; &nbsp; </option>
+                  <option class="u30_input_option" value="人行活動廣場">人行活動廣場</option>
+                  <option class="u30_input_option" value="人行道">人行道</option>
+                  <option class="u30_input_option" value="自行車道">自行車道</option>
+                  <option class="u30_input_option" value="流動廁所">流動廁所</option>
+                </select>
+              </div>
+
+              <!-- Unnamed (Droplist) -->
+              <div id="u31" class="ax_default droplist">
+                <div id="u31_div" class=""></div>
+                <select id="u31_input" class="u31_input">
+                  <option class="u31_input_option" value="    ">&nbsp;&nbsp;&nbsp; </option>
+                  <option class="u31_input_option" value="FG037020001(待巡查)">FG037020001(待巡查)</option>
+                  <option class="u31_input_option" value="FG037020002">FG037020002</option>
+                  <option class="u31_input_option" value="FG037020003">FG037020003</option>
+                  <option class="u31_input_option" value="FG037020004">FG037020004</option>
+                </select>
+              </div>
+
+              <!-- Unnamed (Rectangle) -->
+              <div id="u32" class="ax_default primary_button">
+                <div id="u32_div" class=""></div>
+                <div id="u32_text" class="text ">
+                  <p><span>查詢</span></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u33" class="ax_default box_1">
+              <div id="u33_div" class=""></div>
+              <div id="u33_text" class="text ">
+                <p><span>鄰近點位</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Ellipse) -->
+            <div id="u34" class="ax_default ellipse">
+              <img id="u34_img" class="img " src="images/1_巡檢機制優化-鄰近點位查找/u20.svg"/>
+              <div id="u34_text" class="text " style="display:none; visibility: hidden">
+                <p></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u35" class="ax_default box_1">
+              <div id="u35_div" class=""></div>
+              <div id="u35_text" class="text ">
+                <p><span>掃描QRCode</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Ellipse) -->
+            <div id="u36" class="ax_default ellipse">
+              <img id="u36_img" class="img " src="images/1_巡檢機制優化-鄰近點位查找/u20.svg"/>
+              <div id="u36_text" class="text " style="display:none; visibility: hidden">
+                <p></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Ellipse) -->
+            <div id="u37" class="ax_default ellipse">
+              <img id="u37_img" class="img " src="images/1_巡檢機制優化-鄰近點位查找/u20.svg"/>
+              <div id="u37_text" class="text " style="display:none; visibility: hidden">
+                <p></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Hot Spot) -->
+            <div id="u38" class="ax_default">
+            </div>
+
+            <!-- Unnamed (Hot Spot) -->
+            <div id="u39" class="ax_default">
+            </div>
+
+            <!-- Unnamed (Hot Spot) -->
+            <div id="u40" class="ax_default">
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u41" class="ax_default box_1">
+              <div id="u41_div" class=""></div>
+              <div id="u41_text" class="text ">
+                <p><span>手動填登</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- loss2 (Dynamic Panel) -->
+      <div id="u42" class="ax_default ax_default_hidden" data-label="loss2" style="display:none; visibility: hidden">
+        <div id="u42_state0" class="panel_state" data-label="State1" style="">
+          <div id="u42_state0_content" class="panel_state_content">
+
+            <!-- Unnamed (Image) -->
+            <div id="u43" class="ax_default image">
+              <img id="u43_img" class="img " src="images/1_巡檢機制優化-鄰近點位查找/u15.png"/>
+              <div id="u43_text" class="text " style="display:none; visibility: hidden">
+                <p></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- gps (Dynamic Panel) -->
+      <div id="u44" class="ax_default" data-label="gps">
+        <div id="u44_state0" class="panel_state" data-label="State1" style="">
+          <div id="u44_state0_content" class="panel_state_content">
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u45" class="ax_default box_2">
+              <div id="u45_div" class=""></div>
+              <div id="u45_text" class="text " style="display:none; visibility: hidden">
+                <p></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u46" class="ax_default box_1">
+              <div id="u46_div" class=""></div>
+              <div id="u46_text" class="text " style="display:none; visibility: hidden">
+                <p></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u47" class="ax_default box_3">
+              <div id="u47_div" class=""></div>
+              <div id="u47_text" class="text ">
+                <p><span>鄰近待巡查設施群組清單</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u48" class="ax_default box_3">
+              <div id="u48_div" class=""></div>
+              <div id="u48_text" class="text " style="display:none; visibility: hidden">
+                <p></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u49" class="ax_default heading_1">
+              <div id="u49_div" class=""></div>
+              <div id="u49_text" class="text ">
+                <p><span>巡查群組編號</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u50" class="ax_default heading_1">
+              <div id="u50_div" class=""></div>
+              <div id="u50_text" class="text ">
+                <p><span>設施類型</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u51" class="ax_default heading_1">
+              <div id="u51_div" class=""></div>
+              <div id="u51_text" class="text ">
+                <p><span>下次應巡查日期</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u52" class="ax_default heading_1">
+              <div id="u52_div" class=""></div>
+              <div id="u52_text" class="text ">
+                <p><span>與設施距離</span><span>(M)</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u53" class="ax_default heading_1">
+              <div id="u53_div" class=""></div>
+              <div id="u53_text" class="text ">
+                <p><span>FG037010006</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u54" class="ax_default heading_1">
+              <div id="u54_div" class=""></div>
+              <div id="u54_text" class="text ">
+                <p><span>人行道</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u55" class="ax_default heading_1">
+              <div id="u55_div" class=""></div>
+              <div id="u55_text" class="text ">
+                <p><span>114-06-22</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u56" class="ax_default heading_1">
+              <div id="u56_div" class=""></div>
+              <div id="u56_text" class="text ">
+                <p><span>0.5m</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u57" class="ax_default box_2">
+              <div id="u57_div" class=""></div>
+              <div id="u57_text" class="text ">
+                <p><span>巡檢</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u58" class="ax_default heading_1">
+              <div id="u58_div" class=""></div>
+              <div id="u58_text" class="text ">
+                <p><span>FG037020001</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u59" class="ax_default heading_1">
+              <div id="u59_div" class=""></div>
+              <div id="u59_text" class="text ">
+                <p><span>人行活動廣場空間</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u60" class="ax_default heading_1">
+              <div id="u60_div" class=""></div>
+              <div id="u60_text" class="text ">
+                <p><span>114-06-22</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u61" class="ax_default heading_1">
+              <div id="u61_div" class=""></div>
+              <div id="u61_text" class="text ">
+                <p><span>0.6m</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u62" class="ax_default heading_1">
+              <div id="u62_div" class=""></div>
+              <div id="u62_text" class="text ">
+                <p><span>FG037020002</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u63" class="ax_default heading_1">
+              <div id="u63_div" class=""></div>
+              <div id="u63_text" class="text ">
+                <p><span>人行活動廣場空間</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u64" class="ax_default heading_1">
+              <div id="u64_div" class=""></div>
+              <div id="u64_text" class="text ">
+                <p><span>114-06-29</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u65" class="ax_default heading_1">
+              <div id="u65_div" class=""></div>
+              <div id="u65_text" class="text ">
+                <p><span>0.6m</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u66" class="ax_default heading_1">
+              <div id="u66_div" class=""></div>
+              <div id="u66_text" class="text ">
+                <p><span>FG037020003</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u67" class="ax_default heading_1">
+              <div id="u67_div" class=""></div>
+              <div id="u67_text" class="text ">
+                <p><span>流動廁所</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u68" class="ax_default heading_1">
+              <div id="u68_div" class=""></div>
+              <div id="u68_text" class="text ">
+                <p><span>114-06-22</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u69" class="ax_default heading_1">
+              <div id="u69_div" class=""></div>
+              <div id="u69_text" class="text ">
+                <p><span>0.85m</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u70" class="ax_default box_2">
+              <div id="u70_div" class=""></div>
+              <div id="u70_text" class="text ">
+                <p><span>巡檢</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u71" class="ax_default heading_1">
+              <div id="u71_div" class=""></div>
+              <div id="u71_text" class="text ">
+                <p><span>FG037020002</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u72" class="ax_default heading_1">
+              <div id="u72_div" class=""></div>
+              <div id="u72_text" class="text ">
+                <p><span>欄杆</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u73" class="ax_default heading_1">
+              <div id="u73_div" class=""></div>
+              <div id="u73_text" class="text ">
+                <p><span>114-07-06</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u74" class="ax_default heading_1">
+              <div id="u74_div" class=""></div>
+              <div id="u74_text" class="text ">
+                <p><span>0.89m</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u75" class="ax_default heading_1">
+              <div id="u75_div" class=""></div>
+              <div id="u75_text" class="text ">
+                <p><span>FG037020003</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u76" class="ax_default heading_1">
+              <div id="u76_div" class=""></div>
+              <div id="u76_text" class="text ">
+                <p><span>人行活動廣場空間</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u77" class="ax_default heading_1">
+              <div id="u77_div" class=""></div>
+              <div id="u77_text" class="text ">
+                <p><span>114-07-06</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u78" class="ax_default heading_1">
+              <div id="u78_div" class=""></div>
+              <div id="u78_text" class="text ">
+                <p><span>0.98m</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u79" class="ax_default box_2">
+              <div id="u79_div" class=""></div>
+              <div id="u79_text" class="text ">
+                <p><span>巡檢</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u80" class="ax_default box_3">
+              <div id="u80_div" class=""></div>
+              <div id="u80_text" class="text " style="display:none; visibility: hidden">
+                <p></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u81" class="ax_default heading_1">
+              <div id="u81_div" class=""></div>
+              <div id="u81_text" class="text ">
+                <p><span style="color:#000000;">1 </span><span style="color:#FFFFFF;">&nbsp; 2&nbsp;&nbsp; 3&nbsp;&nbsp; 4&nbsp;&nbsp; </span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u82" class="ax_default box_2">
+              <div id="u82_div" class=""></div>
+              <div id="u82_text" class="text ">
+                <p><span>巡檢</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u83" class="ax_default heading_1">
+              <div id="u83_div" class=""></div>
+              <div id="u83_text" class="text ">
+                <p><span>設施區域</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u84" class="ax_default heading_1">
+              <div id="u84_div" class=""></div>
+              <div id="u84_text" class="text ">
+                <p><span>雙溪左岸</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u85" class="ax_default heading_1">
+              <div id="u85_div" class=""></div>
+              <div id="u85_text" class="text ">
+                <p><span>雙溪左岸</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u86" class="ax_default heading_1">
+              <div id="u86_div" class=""></div>
+              <div id="u86_text" class="text ">
+                <p><span>雙溪右岸</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u87" class="ax_default heading_1">
+              <div id="u87_div" class=""></div>
+              <div id="u87_text" class="text ">
+                <p><span>雙溪右岸</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u88" class="ax_default heading_1">
+              <div id="u88_div" class=""></div>
+              <div id="u88_text" class="text ">
+                <p><span>雙溪左岸</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u89" class="ax_default heading_1">
+              <div id="u89_div" class=""></div>
+              <div id="u89_text" class="text ">
+                <p><span>雙溪左岸</span></p>
+              </div>
+            </div>
+
+            <!-- 20001 (Dynamic Panel) -->
+            <div id="u90" class="ax_default ax_default_hidden" data-label="20001" style="display:none; visibility: hidden">
+              <div id="u90_state0" class="panel_state" data-label="State1" style="">
+                <div id="u90_state0_content" class="panel_state_content">
+
+                  <!-- Unnamed (Rectangle) -->
+                  <div id="u91" class="ax_default box_2">
+                    <div id="u91_div" class=""></div>
+                    <div id="u91_text" class="text " style="display:none; visibility: hidden">
+                      <p></p>
+                    </div>
+                  </div>
+
+                  <!-- Unnamed (Image) -->
+                  <div id="u92" class="ax_default image">
+                    <img id="u92_img" class="img " src="images/1_巡檢機制優化-鄰近點位查找/u92.png"/>
+                    <div id="u92_text" class="text " style="display:none; visibility: hidden">
+                      <p></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 10006 (Dynamic Panel) -->
+            <div id="u93" class="ax_default ax_default_hidden" data-label="10006" style="display:none; visibility: hidden">
+              <div id="u93_state0" class="panel_state" data-label="State1" style="">
+                <div id="u93_state0_content" class="panel_state_content">
+
+                  <!-- Unnamed (Image) -->
+                  <div id="u94" class="ax_default image">
+                    <img id="u94_img" class="img " src="images/1_巡檢機制優化-鄰近點位查找/u94.png"/>
+                    <div id="u94_text" class="text " style="display:none; visibility: hidden">
+                      <p></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Unnamed (Image) -->
+            <div id="u95" class="ax_default image">
+              <img id="u95_img" class="img " src="images/1_巡檢機制優化-鄰近點位查找/u95.png"/>
+              <div id="u95_text" class="text " style="display:none; visibility: hidden">
+                <p></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u96" class="ax_default box_1">
+              <div id="u96_div" class=""></div>
+              <div id="u96_text" class="text ">
+                <p><span>鄰近點位</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u97" class="ax_default box_1">
+              <div id="u97_div" class=""></div>
+              <div id="u97_text" class="text ">
+                <p><span>掃描QRCode</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Ellipse) -->
+            <div id="u98" class="ax_default ellipse">
+              <img id="u98_img" class="img " src="images/1_巡檢機制優化-鄰近點位查找/u20.svg"/>
+              <div id="u98_text" class="text " style="display:none; visibility: hidden">
+                <p></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Ellipse) -->
+            <div id="u99" class="ax_default ellipse">
+              <img id="u99_img" class="img " src="images/1_巡檢機制優化-鄰近點位查找/u20.svg"/>
+              <div id="u99_text" class="text " style="display:none; visibility: hidden">
+                <p></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u100" class="ax_default box_2">
+              <div id="u100_div" class=""></div>
+              <div id="u100_text" class="text ">
+                <p><span>巡檢</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u101" class="ax_default box_2">
+              <div id="u101_div" class=""></div>
+              <div id="u101_text" class="text ">
+                <p><span>巡檢</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Ellipse) -->
+            <div id="u102" class="ax_default ellipse">
+              <img id="u102_img" class="img " src="images/1_巡檢機制優化-鄰近點位查找/u20.svg"/>
+              <div id="u102_text" class="text " style="display:none; visibility: hidden">
+                <p></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u103" class="ax_default box_1">
+              <div id="u103_div" class=""></div>
+              <div id="u103_text" class="text ">
+                <p><span>手動填登</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Ellipse) -->
+            <div id="u104" class="ax_default ellipse">
+              <img id="u104_img" class="img " src="images/1_巡檢機制優化-鄰近點位查找/u20.svg"/>
+              <div id="u104_text" class="text " style="display:none; visibility: hidden">
+                <p></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (Hot Spot) -->
+            <div id="u105" class="ax_default">
+            </div>
+
+            <!-- Unnamed (Hot Spot) -->
+            <div id="u106" class="ax_default">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (Table) -->
+      <div id="u107" class="ax_default">
+
+        <!-- Unnamed (Table Cell) -->
+        <div id="u108" class="ax_default table_cell">
+          <img id="u108_img" class="img " src="images/1_巡檢機制優化-鄰近點位查找/u108.png"/>
+          <div id="u108_text" class="text ">
+            <p><span>【</span><span>鄰近待巡查設施群組清單</span><span>】</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (Table Cell) -->
+        <div id="u109" class="ax_default table_cell">
+          <img id="u109_img" class="img " src="images/1_巡檢機制優化-鄰近點位查找/u108.png"/>
+          <div id="u109_text" class="text ">
+            <p><span>一、此清單僅列出操作者 GPS 定位鄰近 50 公尺內的待巡查設施群組</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (Table Cell) -->
+        <div id="u110" class="ax_default table_cell">
+          <img id="u110_img" class="img " src="images/1_巡檢機制優化-鄰近點位查找/u108.png"/>
+          <div id="u110_text" class="text ">
+            <p><span>二、此清單出現的巡查群組編號等資料，都是待巡查的群組資料，不會出現已巡查群組的資料</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (Table Cell) -->
+        <div id="u111" class="ax_default table_cell">
+          <img id="u111_img" class="img " src="images/1_巡檢機制優化-鄰近點位查找/u108.png"/>
+          <div id="u111_text" class="text ">
+            <p><span>三、清單內容包括以下資料：</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (Table Cell) -->
+        <div id="u112" class="ax_default table_cell">
+          <img id="u112_img" class="img " src="images/1_巡檢機制優化-鄰近點位查找/u108.png"/>
+          <div id="u112_text" class="text ">
+            <p><span>&nbsp; 　　(1) 巡查群組編號 (2) 設施區域 (3) 設施類型 (4) 下次應巡查日期 (5) 與設施距離(M) </span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (Table Cell) -->
+        <div id="u113" class="ax_default table_cell">
+          <img id="u113_img" class="img " src="images/1_巡檢機制優化-鄰近點位查找/u108.png"/>
+          <div id="u113_text" class="text ">
+            <p><span>&nbsp; 　　(6) 巡檢按鍵，點擊後會出現下方「本次巡檢項目」區塊</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (Table Cell) -->
+        <div id="u114" class="ax_default table_cell">
+          <img id="u114_img" class="img " src="images/1_巡檢機制優化-鄰近點位查找/u108.png"/>
+          <div id="u114_text" class="text ">
+            <p><span>四、清單會依據「與設施距離」進行排序，距離愈近排序位置愈上方，若距離相同，</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (Table Cell) -->
+        <div id="u115" class="ax_default table_cell">
+          <img id="u115_img" class="img " src="images/1_巡檢機制優化-鄰近點位查找/u108.png"/>
+          <div id="u115_text" class="text ">
+            <p><span>　　再依巡查群組編號進行第二次排序，巡查群組編號愈小排序位置愈上方</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (Table Cell) -->
+        <div id="u116" class="ax_default table_cell">
+          <img id="u116_img" class="img " src="images/1_巡檢機制優化-鄰近點位查找/u108.png"/>
+          <div id="u116_text" class="text ">
+            <p><span>五、此區塊一次出現 15 筆資料，若超過 15 筆資料就需換頁，就會出現頁數區塊</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (Table Cell) -->
+        <div id="u117" class="ax_default table_cell">
+          <img id="u117_img" class="img " src="images/1_巡檢機制優化-鄰近點位查找/u108.png"/>
+          <div id="u117_text" class="text ">
+            <p><span>六、當使用者點擊「我的位置」，此處的資料也應更新(Reload) + 「本次巡檢項目」區塊應消失 ← 可討論做法</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (Table Cell) -->
+        <div id="u118" class="ax_default table_cell">
+          <img id="u118_img" class="img " src="images/1_巡檢機制優化-鄰近點位查找/u108.png"/>
+          <div id="u118_text" class="text ">
+            <p><span>七、若系統無法抓取使用者的 GPS 資料，當使用者點擊「鄰近點位」按鍵，會出現錯誤訊息提醒：</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (Table Cell) -->
+        <div id="u119" class="ax_default table_cell">
+          <img id="u119_img" class="img " src="images/1_巡檢機制優化-鄰近點位查找/u108.png"/>
+          <div id="u119_text" class="text ">
+            <p><span>&nbsp;&nbsp; &nbsp; &nbsp; 「您的 GPS 功能無法正常運作，也無法查詢鄰近點位資料，請更換其他巡查方式。」(畫面不跳轉)</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (Table Cell) -->
+        <div id="u120" class="ax_default table_cell">
+          <img id="u120_img" class="img " src="images/1_巡檢機制優化-鄰近點位查找/u108.png"/>
+          <div id="u120_text" class="text ">
+            <p><span>八、若操作者 GPS 定位鄰近 50 公尺內，查無任何待巡查設施群組，會出現錯誤訊息提醒：</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (Table Cell) -->
+        <div id="u121" class="ax_default table_cell">
+          <img id="u121_img" class="img " src="images/1_巡檢機制優化-鄰近點位查找/u108.png"/>
+          <div id="u121_text" class="text ">
+            <p><span>　　「GPS&nbsp; 定位鄰近 50 公尺內，查無任何待巡查設施群組。」(畫面不跳轉或跳轉出現錯誤訊息 ← 可討論做法)</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (Table Cell) -->
+        <div id="u122" class="ax_default table_cell">
+          <img id="u122_img" class="img " src="images/1_巡檢機制優化-鄰近點位查找/u122.png"/>
+          <div id="u122_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="resources/scripts/axure/ios.js"></script>
+  </body>
+</html>
